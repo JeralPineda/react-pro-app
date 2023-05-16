@@ -1,6 +1,7 @@
+import { useProduct } from '../hooks/useProduct';
+
 import styles from '../styles/styles.module.css';
 import noImage from '../assets/no-image.jpg';
-import { useProduct } from '../hooks/useProduct';
 
 export const ProductCard = () => {
   const { counter, increaseBy } = useProduct();

@@ -7,9 +7,10 @@ import noImage from '../assets/no-image.jpg';
 export interface Props {
   img?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export const ProductImage = ({ img, className }: Props) => {
+export const ProductImage = ({ img, className, style }: Props) => {
   const { product } = useContext(ProductContext);
   let imgToShow: string;
 
@@ -26,6 +27,7 @@ export const ProductImage = ({ img, className }: Props) => {
       className={`${styles.productImg} ${className}`}
       src={imgToShow}
       alt="Product Image"
+      style={style}
     />
   );
 };

@@ -25,12 +25,12 @@ export const ShopingPage = () => {
           flexWrap: 'nowrap',
         }}
       >
-        <ProductCard product={product}>
-          <ProductCard.Image />
+        <ProductCard product={product} className="bg-dark text-white">
+          <ProductCard.Image className="custom-image" />
 
-          <ProductCard.Title title="Hola Mundo" />
+          <ProductCard.Title title="Hola Mundo" className="text-bold" />
 
-          <ProductCard.Buttons />
+          <ProductCard.Buttons className="custom-buttons" />
         </ProductCard>
 
         <ProductCard product={product} className="bg-dark text-white">

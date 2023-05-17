@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 export interface ProductCardProps {
   product: Product;
   children?: ReactNode;
+  className?: string;
 }
 export interface Product {
   id: string;

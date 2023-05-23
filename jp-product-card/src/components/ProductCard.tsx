@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import React, { createContext } from 'react';
 
 import { useProduct } from '../hooks/useProduct';
 import {
@@ -33,13 +33,18 @@ export const ProductCard = ({
   value,
   initialValues,
 }: Props) => {
-  const { counter, increaseBy, maxCount, isMaxCountReached, reset } =
-    useProduct({
-      onChange,
-      product,
-      value,
-      initialValues,
-    });
+  const {
+    counter,
+    increaseBy,
+    maxCount,
+    isMaxCountReached,
+    reset,
+  } = useProduct({
+    onChange,
+    product,
+    value,
+    initialValues,
+  });
 
   return (
     <Provider

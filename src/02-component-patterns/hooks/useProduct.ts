@@ -41,6 +41,7 @@ export const useProduct = ({
   return {
     //* Prpiedades
     counter,
+    maxCount: initialValues?.maxCount,
 
     //* Metodos
     increaseBy,

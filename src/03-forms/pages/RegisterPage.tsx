@@ -13,17 +13,23 @@ export const RegisterPage = () => {
   const { name, email, password1, password2 } = registerData;
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setRegisterData({
-      ...registerData,
+    setRegisterData((prev) => ({
+      ...prev,
       [event.target.name]: event.target.value,
-    });
+    }));
+  };
+
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    console.log(registerData);
   };
 
   return (
     <div>
       <h1>RegisterPage</h1>
 
-      <form>
+      <form onSubmit={onSubmit}>
         <input
           type="text"
           placeholder="Name"

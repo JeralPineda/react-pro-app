@@ -12,5 +12,12 @@
     "placeholder": "Apellido",
     "label": "Apellido",
     "value": ""
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "correo@correo.com",
+    "label": "Correo",
+    "value": ""
   }
 ]

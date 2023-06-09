@@ -19,5 +19,12 @@
     "placeholder": "correo@correo.com",
     "label": "Correo",
     "value": ""
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": ["Super Smash", "Metal Gear", "Resident Evil"]
   }
 ]

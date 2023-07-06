@@ -25,6 +25,19 @@
     "name": "favoriteGame",
     "label": "Favorite Game",
     "value": "",
-    "options": ["Super Smash", "Metal Gear", "Resident Evil"]
+    "options": [
+      {
+        "id": 1,
+        "label": "Super Smash"
+      },
+      {
+        "id": 2,
+        "label": "Metal Gear"
+      },
+      {
+        "id": 3,
+        "label": "Resident Evil"
+      }
+    ]
   }
 ]

@@ -13,14 +13,25 @@ for (const input of formJson) {
 
   if (!input.validations) continue;
 
-  let schema = Yup.object();
+  let schema = Yup.string();
 
   for (const rule of input.validations) {
     if (rule.type === 'required') {
       schema = schema.required('Este campo es requerido');
     }
 
-    //... Otras reglas
+    if (rule.type === 'minLength') {
+      schema = schema.min(
+        (rule as any).value || 2,
+        `Mínimo de ${(rule as any).value || 2} caracteres`
+      );
+    }
+
+    if (rule.type === 'email') {
+      schema = schema.email(`Revise el formato del email`);
+    }
+
+    // ... otras reglas
   }
 
   requiredFields[input.name] = schema;
@@ -41,7 +52,7 @@ export const DynamicForm = () => {
         }}
       >
         {() => (
-          <Form>
+          <Form noValidate>
             {formJson.map(({ type, name, placeholder, label, options }) => {
               if (type === 'input' || type === 'password' || type === 'email') {
                 return (
@@ -68,6 +79,7 @@ export const DynamicForm = () => {
 
               throw new Error(`El type: ${type}, no es soportado`);
             })}
+
             <button type="submit">Submit</button>
           </Form>
         )}

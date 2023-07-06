@@ -4,7 +4,12 @@
     "name": "firstName",
     "placeholder": "Nombre",
     "label": "Nombre",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
   },
   {
     "type": "input",
